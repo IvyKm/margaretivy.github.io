@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #FFFFFF;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #e0f2fe, #dbeafe);
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.hero-container {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.typewriter {
+  font-weight: 600;
+  color: #3b82f6;
+  border-right: 2px solid #3b82f6;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+.cta-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+main section {
+  background: white;
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: fadeInUp 1s ease forwards;
+}
+
+main section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+}
+
+.skills-list li {
+  background-color: #e0f2fe;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 500;
+  color: #1e40af;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 12em; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@media (max-width: 600px) {
+  .name { font-size: 2rem; }
+  .tagline { font-size: 1.2rem; }
+  .cta-button { font-size: 0.9rem; padding: 0.6rem 1.5rem; }
+  .skills-list { flex-direction: column; align-items: start; }
+}
